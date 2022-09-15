@@ -67,7 +67,7 @@ h3 {
     line-height: 65px;
     font-size: 10px;
     color: white;
-    margin-left: 15px;
+    margin-left: -20px;
     box-sizing: border-box;
     border-bottom: 1px solid black;
     transition: .5s;
@@ -91,22 +91,22 @@ label #btn, label #cancel {
 label #btn {
     left: 12px;
     top: 25px;
-    font-size: 43px;
+    font-size: 30px;
     color: white;
-    padding: 6px 12px;
+    padding: 6px 9px;
     transition: all .5s;
     display: none;
-    transition: all .5s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 label #cancel {
     z-index: 1111;
-    left: -195px;
+    left: -185px;
     top: 17px;
-    font-size: 30px;
+    font-size: 20px;
     color: white;
     padding: 4px 9px;
-    transition: all .5s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 #check:checked ~ .list {
@@ -120,7 +120,7 @@ label #cancel {
 }
 
 #check:checked ~ label #cancel {
-    left: 195px;
+    left: 185px;
 }
 
 section {
@@ -158,7 +158,7 @@ section {
 .drop-menu {
     position: absolute;
     width: 250px;
-    left: 40px;
+    left: 30px;
     top: calc(100% + .25rem);
     background-color: #333;
     color: white;
