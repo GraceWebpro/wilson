@@ -1,0 +1,247 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(189, 185, 188);
+    width: 100%;
+}
+
+
+.header-list {
+    display: flex;
+    justify-content: center;
+    width: 96%;
+    height: 50px;
+    background-color: black;
+    margin-top: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 400;
+    top: 10px;
+    text-transform: uppercase;
+}
+.link:hover {
+    color: gray;
+}
+
+h3 {
+    color: #ffffff;
+    font-size: 32px;
+    margin-top: 1px;
+}
+
+.list {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: 0px;
+    background: #555;
+    transition: .5s;
+    text-align: left;
+}
+
+
+.list header {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #333;
+    user-select: none;
+    font-weight: 600;
+    top: 20px;
+}
+
+.list ul li {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 10px;
+    color: white;
+    margin-left: 15px;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    transition: .5s;
+}
+
+.list ul li:hover {
+    padding-left: 30px;
+}
+
+#check {
+    display: none;
+}
+
+label #btn, label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: #333;
+    border-radius: 3px;
+}
+
+label #btn {
+    left: 12px;
+    top: 25px;
+    font-size: 43px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s;
+    display: none;
+    transition: all .5s ease-in-out;
+}
+
+label #cancel {
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: white;
+    padding: 4px 9px;
+    transition: all .5s ease-in-out;
+}
+
+#check:checked ~ .list {
+    left: 0;
+}
+
+#check:checked ~ label #btn {
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+    left: 195px;
+}
+
+section {
+    background-position: center;
+}
+
+#check:checked ~ section {
+    margin-left: 250px;
+    transition: all .5s;
+}
+
+#check:checked ~ .navbar {
+    margin-left: 250px;
+    transition: all .5s;
+}
+
+.drop-link {
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 6px 8px 6px 20px;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    text-align: left;
+}
+
+.drop-menu {
+    position: absolute;
+    width: 250px;
+    left: 40px;
+    top: calc(100% + .25rem);
+    background-color: #333;
+    color: white;
+    font-size: 20px;
+    padding: .5rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown > .drop-link:focus, .drop-link:hover {
+    color: gray;
+}
+
+.dropdown > .drop-link:focus + .drop-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    padding-right: 15px;
+    float: right;
+}
+
+.drop-menu p {
+    font-size: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .link:not(:nth-child(3)) {
+        display: none;
+    }
+    
+    label #btn {
+        display: block;
+    }
+    h3 {
+        font-size: 25px;
+        
+    }
+  
+    .link2:hover {
+        color: gray;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    h3 {
+        font-size: 10px;
+    }
+
+    #btn {
+        display: block;
+    }
+ }
+
+@media screen and (max-width: 700px) {
+   h3 {
+       font-size: 20px;
+   }
+
+   #btn {
+       display: flex;
+   }
+}
+@media screen and (max-width: 617px) {
+    h3 {
+        font-size: 22px;
+    }
+
+    #btn {
+        display: flex;
+    }
+ }
+
+@media screen and (max-width: 952px) {
+    h3 {
+        font-size: 25px;
+    }
+    .link, .drop-link { 
+        font-size: 15px;
+        margin-top: 10px;
+    }   
+}
