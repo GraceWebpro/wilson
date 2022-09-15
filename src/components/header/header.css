@@ -90,10 +90,10 @@ label #btn, label #cancel {
 
 label #btn {
     left: 12px;
-    top: 25px;
-    font-size: 30px;
+    top: 27px;
+    font-size: 25px;
     color: white;
-    padding: 6px 9px;
+    padding: 7px 9px;
     transition: all .5s;
     display: none;
     transition: all .4s ease-in-out;
