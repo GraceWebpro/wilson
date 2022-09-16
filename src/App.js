@@ -5,6 +5,8 @@ import Footer from './components/footer/Footer';
 import Home from './components/home/Home'
 import Music from './components/music/Music'
 import News from './components/news/News'
+import NewsDetails from './components/news/NewsDetails'
+
 import Video from './components/video/Video'
 import AdminLogin from './components/admin/AdminLogin';
 
@@ -30,7 +32,7 @@ function App() {
           <Route exact path='/login' component={AdminLogin} />
         </Switch>
         <Switch>
-          <Route exact path='/news/:id' component={Home} />
+          <Route exact path='/news/:id' component={NewsDetails} />
         </Switch>
         <Footer />
       </Router>
