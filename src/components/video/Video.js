@@ -11,7 +11,7 @@ const Video = () => {
     useEffect(() => {
         const collRef = collection(db, 'movies')
 
-        const q = query(collRef, orderBy('createdAt', 'asc'))
+        const q = query(collRef, orderBy('createdAt', 'desc'))
 
         const fetchVideos = onSnapshot(q, snapshot => {
             setMovies(snapshot.docs.map(doc => {

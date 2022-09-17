@@ -13,7 +13,7 @@ const Music = () => {
     useEffect(() => {
         const collRef = collection(db, 'music')
 
-        const q = query(collRef, orderBy('createdAt', 'asc'))
+        const q = query(collRef, orderBy('createdAt', 'desc'))
 
         const fetchUsers = onSnapshot(q, snapshot => {
             setMusic(snapshot.docs.map(doc => {
