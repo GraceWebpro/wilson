@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { collection, onSnapshot } from "@firebase/firestore";
+import { collection, onSnapshot, orderBy, query } from "@firebase/firestore";
 import { db } from '../../config/firebase'
 import './video.css'
 import useDocumentTitle from '../../useDocumentTitle';
@@ -11,7 +11,9 @@ const Video = () => {
     useEffect(() => {
         const collRef = collection(db, 'movies')
 
-        const fetchVideos = onSnapshot(collRef, snapshot => {
+        const q = query(collRef, orderBy('createdAt', 'asc'))
+
+        const fetchVideos = onSnapshot(q, snapshot => {
             setMovies(snapshot.docs.map(doc => {
                 return {
                     id: doc.id,

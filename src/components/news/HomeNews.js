@@ -9,7 +9,7 @@ const HomeNews = () => {
     useEffect(() => {
         const collRef = collection(db, 'news')
 
-        const q = query(collRef, orderBy('createdAt'), limit(3))
+        const q = query(collRef, orderBy('createdAt', 'asc'), limit(3))
 
         const fetchNews = onSnapshot(q, snapshot => {
             setNews(snapshot.docs.map(doc => {

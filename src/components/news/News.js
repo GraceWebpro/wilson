@@ -12,7 +12,7 @@ const News = () => {
     useEffect(() => {
         const collRef = collection(db, 'news')
 
-        const q = query(collRef, orderBy('createdAt'))
+        const q = query(collRef, orderBy('createdAt', 'asc'))
 
         const fetchNews = onSnapshot(q, snapshot => {
             setNews(snapshot.docs.map(doc => {
@@ -22,6 +22,7 @@ const News = () => {
                     image: doc.data().images,
                     subTitle: doc.data().subTitle,
                     content: doc.data().content,
+                    date: doc.data().date
                 }
             }))
             fetchNews();

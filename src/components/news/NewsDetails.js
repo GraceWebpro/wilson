@@ -17,6 +17,7 @@ const NewsDetail = (props) => {
           image: doc.data().images,
           subTitle: doc.data().subTitle,
           content: doc.data().content,
+          date: doc.data().date
       })
       console.log(setNews);
     })
