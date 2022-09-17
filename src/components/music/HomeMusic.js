@@ -1,36 +1,35 @@
 import React, { useState, useEffect } from 'react'
-import { collection, onSnapshot, orderBy, query} from "@firebase/firestore";
+import { collection, onSnapshot, limit, orderBy, query } from "@firebase/firestore";
 import { db } from '../../config/firebase'
+import { Link } from 'react-router-dom';
 import './music.css'
-import useDocumentTitle from '../../useDocumentTitle';
 
-
-const Music = () => {
-    useDocumentTitle('Music | Michael O. Wilson')
-
+const HomeMusic = () => {
 
     const [isMusics, setMusic] = useState([]);
     useEffect(() => {
         const collRef = collection(db, 'music')
 
-        const q = query(collRef, orderBy('createdAt', 'desc'))
+        const q = query(collRef, orderBy('createdAt', 'desc'), limit(3))
 
-        const fetchMusic = onSnapshot(q, snapshot => {
+        const fetchNews = onSnapshot(q, snapshot => {
             setMusic(snapshot.docs.map(doc => {
                 return {
                     id: doc.id,
                     title: doc.data().title,
                     image: doc.data().images,
-                    homepage: doc.data().homepage,
-                    month: doc.data().month,
+                    subTitle: doc.data().subTitle,
+                    content: doc.data().content,
+                    date: doc.data().date,
+                   
                 }
             }))
-            fetchMusic();
+            fetchNews();
         })
     },[])
   return (
     <div>
-        <h1>Music</h1>
+        <h5>Music</h5>
         <div  className='music-container'>
         {isMusics.map(isMusic => {
             return (
@@ -43,9 +42,10 @@ const Music = () => {
                 </div>   
             )
         })}
+        <Link to='/music'><button>Music list</button></Link>
         </div>
     </div>
   )
 }
 
-export default Music
+export default HomeMusic

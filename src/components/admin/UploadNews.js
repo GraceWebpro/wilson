@@ -75,7 +75,7 @@ const UploadNews = () => {
         <center>
             <div className='new-container'>
                 
-              <h2>Upload Music</h2>
+              <h2>Upload News</h2>
               <form onSubmit={onSubmit}>
                 <input className='file' type='file' onChange={imageAsFile} />
                 <input className='text' type='title' name='title' placeholder='title' value={userInfo.title} onChange={onChange} />

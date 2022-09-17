@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 import Parse from 'parse/dist/parse.min.js';
 import UploadMusic from './UploadMusic';
 import './admin.css'
-import UploadVideo from './UploadVideo';
+import UpdateVideo from './UpdateVideo';
+import UploadVideo from './UploadVideo'
 import UploadNews from './UploadNews';
 
 // Your Parse initialization configuration goes here
@@ -128,6 +129,7 @@ const AdminLogin = () => {
           <UploadMusic />
           <UploadVideo />
           <UploadNews />
+          <UpdateVideo />
         </div>)
       }
     </div>

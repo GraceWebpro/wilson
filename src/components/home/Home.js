@@ -1,6 +1,9 @@
 import React from 'react'
 import useDocumentTitle from '../../useDocumentTitle'
+import HomeMusic from '../music/HomeMusic'
+import HomeVideo from '../video/HomeVideo'
 import HomeNews from '../news/HomeNews'
+
 import './home.css'
 
 
@@ -9,8 +12,8 @@ const Home = () => {
 
   return (
     <div>
-        
-        <h4>Home</h4>
+        <HomeVideo />
+        <HomeMusic />
         <HomeNews />
     </div>
   )
