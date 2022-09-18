@@ -7,7 +7,17 @@
     gap: .2rem;
 }
 
+h1 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 40px;
+    text-transform: uppercase;
+}
 
+.iframe-2 {
+    width: 90% !important;
+}
 /*----- MEDIA QUERIES TABLET (MEDIUM DEVICES)-------*/
 @media screen and (max-width: 1200px) {
     .video-container {
@@ -15,8 +25,12 @@
     }
 
     iframe {
-        width: 330px;
+        width: 350px;
         height: 330px;
+    }
+
+    .frame-2 {
+        height: 500px;
     }
 
     
@@ -31,6 +45,9 @@
         width: 300px;
         height: 300px;
     }
+    .frame-2 {
+        height: 380px;
+    }
     
 }
 
@@ -42,6 +59,9 @@
     iframe {
         width: 240px;
         height: 240px;
+    }
+    .frame-2 {
+        height: 380px;
     }
 }
 
@@ -56,6 +76,13 @@
         width: 660px;
         height: 400px;
     }
+    .frame-2 {
+        height: 350px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -63,7 +90,13 @@
         width: 550px;
         height: 400px;
     }
+    .frame-2 {
+        height: 350px;
+    }
 
+    h1 {
+        font-size: 30px;
+    }
     
 }
 
@@ -71,6 +104,26 @@
     iframe {
         width: 420px;
         height: 320px;
+    }
+    .frame-2 {
+        height: 350px;
+    }
+    
+    h1 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    iframe {
+        width: 320px;
+        height: 320px;
+    }
+    .frame-2 {
+        height: 320px;
+    }
+    h1 {
+        font-size: 25px;
     }
     
 }

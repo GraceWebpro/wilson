@@ -29,23 +29,26 @@ const HomeNews = () => {
     },[])
   return (
     <div>
-        <h5>News</h5>
+        <h5 style={{ marginTop: '20px' }}>News</h5>
       <div className='news-container'>
       {isNews.map(isNews => {
         return (
           <div key={isNews.id} className='news' >
             <Link className='img' to={`/news/${isNews.id}`}>
-              <img src={isNews.image} alt={isNews.title} width={320} height={320} />
+              <img src={isNews.image} alt={isNews.title} width={350} height={320} />
             </Link>
+            <div className='spacer'></div>
             <p>{isNews.date}</p>
-            <hr style={{ width: '60%'}} />
+            <div className='spacer'></div>
+            <center><hr style={{ width: '60%'}} /></center>
+            <div className='spacer'></div>
             <Link to={`/news/${isNews.id}`}><h4>{isNews.title}</h4></Link>
-            <Link to={'/news/' + isNews.id}><button>Read More</button></Link>
+            <Link to={'/news/' + isNews.id}><button className='submit'>Read More</button></Link>
           </div>
         )
       })}
       </div>
-        <Link to='/news'><button>View all news article</button></Link>
+        <center><Link to='/news'><button className='h-submit'>View all news article</button></Link></center>
     </div>
   )
 }

@@ -37,12 +37,15 @@ const News = () => {
         return (
           <div key={isNews.id} className='news' >
             <Link className='img' to={`/news/${isNews.id}`}>
-              <img src={isNews.image} alt={isNews.title} width={320} height={320} />
+              <img src={isNews.image} alt={isNews.title} width={350} height={320} />
             </Link>
+            <div className='.spacer'></div>
             <p>{isNews.date}</p>
-            <hr style={{ width: '60%'}} />
+            <span className='spacer'></span>
+            <center><hr style={{ width: '60%'}} /></center>
+            <span className='spacer'></span>
             <Link to={`/news/${isNews.id}`}><h4>{isNews.title}</h4></Link>
-            <Link to={'/news/' + isNews.id}><button>Read More</button></Link>
+            <Link to={'/news/' + isNews.id}><button className='submit'>Read More</button></Link>
           </div>
         )
       })}

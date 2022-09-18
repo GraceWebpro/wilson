@@ -29,20 +29,22 @@ const HomeMusic = () => {
     },[])
   return (
     <div>
-        <h5>Music</h5>
+        <h5 style={{ marginTop: '20px' }}>Music</h5>
         <div  className='music-container'>
         {isMusics.map(isMusic => {
             return (
                 <div key={isMusic.id} className='music'>
                     <a className='img' href={isMusic.homepage}>
-                        <img src={isMusic.image} alt={isMusic.title} width={320} height={320} />
+                        <img src={isMusic.image} alt={isMusic.title} width={350} height={320} />
                     </a>
+                    <span></span>
                     <h4><a href={isMusic.homepage}>{isMusic.title}</a></h4>
+                    <span></span>
                     <p>{isMusic.month}</p>
                 </div>   
             )
         })}
-        <Link to='/music'><button>Music list</button></Link>
+        <center><Link to='/music'><button className='h-submit'>Music list</button></Link></center>
         </div>
     </div>
   )

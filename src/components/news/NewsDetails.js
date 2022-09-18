@@ -78,9 +78,9 @@ const NewsDetail = (props) => {
   return (
     <div className='mews-details'>
       <div key={isNews.id}>
-        <img className='img' src={isNews.image} alt={isNews.title} />
+        <img className='img' src={isNews.image} width={350} height={320} alt={isNews.title} />
         <p>{isNews.date}</p>
-        <hr style={{ width: '60%'}} />
+        <center><hr style={{ width: '60%'}} /></center>
         <h3>{isNews.title}</h3>
         <h5>{isNews.subTitle}</h5>
         <p>{isNews.content}</p>

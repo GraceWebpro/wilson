@@ -36,7 +36,7 @@ const Music = () => {
             return (
                 <div key={isMusic.id} className='music'>
                     <a className='img' href={isMusic.homepage}>
-                        <img src={isMusic.image} alt={isMusic.title} width={320} height={320} />
+                        <img src={isMusic.image} alt={isMusic.title} width={350} height={320} />
                     </a>
                     <h4><a href={isMusic.homepage}>{isMusic.title}</a></h4>
                     <p>{isMusic.month}</p>

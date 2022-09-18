@@ -4,8 +4,20 @@
     gap: 2rem;
     margin-top: 30px;
 }
+
+.spacer {
+    height: 20px;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    content: "",
+}
 h1 {
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 40px;
+    text-transform: uppercase;
 }
 
 h5 {
@@ -15,6 +27,31 @@ h5 {
     text-transform: uppercase;
 }
 
+.submit {
+    width: 50%;
+    background-color: #0a0a13;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 50px;
+}
+
+.h-submit {
+    width: 260px;
+    background-color: #0a0a13;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 50px;
+}
 .news {
     display: block;
     gap: 1rem;
@@ -39,7 +76,7 @@ h5 {
     }
 
     .img {
-        width: 330px;
+        width: 350px;
         height: 330px;
     }
 
@@ -80,6 +117,10 @@ h5 {
         width: 660px;
         height: 400px;
     }
+
+    h1 {
+        font-size: 30px;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -88,12 +129,29 @@ h5 {
         height: 400px;
     }
 
-    
+    h1 {
+        font-size: 30px;
+    }
 }
 
 @media screen and (max-width: 600px) {
     .img {
         width: 450px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+    
+}
+@media screen and (max-width: 300px) {
+    .img {
+        width: 320px;
+        height: 320px;
+    }
+
+    h1 {
+        font-size: 25px;
     }
     
 }
