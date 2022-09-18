@@ -23,6 +23,7 @@ const Video = () => {
     },[])
   return (
     <div>
+        <center><p className='latest'>Latest Release</p></center>
         {movies.map(movie => (
             <div key={movie.id}>
                  <div className='video'>
@@ -30,7 +31,6 @@ const Video = () => {
                 </div>
             </div>
         ))}
-        <p>New Release</p>
     </div>
   )
 }
