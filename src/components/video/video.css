@@ -25,7 +25,8 @@ h1 {
 }
 
 .iframe-2 {
-    width: 90% !important;
+    width: 55% !important;
+    height: 
 }
 /*----- MEDIA QUERIES TABLET (MEDIUM DEVICES)-------*/
 @media screen and (max-width: 1200px) {
@@ -35,11 +36,11 @@ h1 {
 
     iframe {
         width: 350px;
-        height: 330px;
+        height: 315px;
     }
 
     .frame-2 {
-        height: 500px;
+        height: 315px;
     }
 
     
@@ -52,10 +53,10 @@ h1 {
 
     iframe {
         width: 300px;
-        height: 300px;
+        height: 315px;
     }
     .frame-2 {
-        height: 380px;
+        height: 315px;
     }
     
 }
@@ -67,10 +68,10 @@ h1 {
 
     iframe {
         width: 240px;
-        height: 240px;
+        height: 315px;
     }
     .frame-2 {
-        height: 380px;
+        height: 315px;
     }
 }
 
@@ -83,10 +84,10 @@ h1 {
 
     iframe {
         width: 660px;
-        height: 400px;
+        height: 315px;
     }
     .frame-2 {
-        height: 350px;
+        height: 315px;
     }
 
     h1 {
@@ -97,10 +98,10 @@ h1 {
 @media screen and (max-width: 700px) {
     iframe {
         width: 550px;
-        height: 400px;
+        height: 315px;
     }
     .frame-2 {
-        height: 350px;
+        height: 315px;
     }
 
     h1 {
@@ -111,11 +112,11 @@ h1 {
 
 @media screen and (max-width: 600px) {
     iframe {
-        width: 420px;
-        height: 320px;
+        width: 400px;
+        height: 315px;
     }
     .frame-2 {
-        height: 350px;
+        height: 315px;
     }
     
     h1 {
@@ -125,11 +126,11 @@ h1 {
 
 @media screen and (max-width: 300px) {
     iframe {
-        width: 320px;
-        height: 320px;
+        width: 300px;
+        height: 315px;
     }
     .frame-2 {
-        height: 320px;
+        height: 315px;
     }
     h1 {
         font-size: 25px;

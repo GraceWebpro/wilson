@@ -37,15 +37,17 @@ const HomeMusic = () => {
                     <a className='img' href={isMusic.homepage}>
                         <img src={isMusic.image} alt={isMusic.title} width={350} height={320} />
                     </a>
-                    <span></span>
-                    <h4><a href={isMusic.homepage}>{isMusic.title}</a></h4>
-                    <span></span>
+                    <span className='spacer'></span>
+                    <center>
+                        <p className='latest'><a href={isMusic.homepage}>{isMusic.title}</a></p>
+                    </center>
+                    <span className='spacer'></span>
                     <p>{isMusic.month}</p>
                 </div>   
             )
         })}
-        <center><Link to='/music'><button className='h-submit'>Music list</button></Link></center>
         </div>
+        <center><Link to='/music'><button className='h-submit'>Music list</button></Link></center>
     </div>
   )
 }

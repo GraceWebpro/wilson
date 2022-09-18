@@ -186,12 +186,12 @@ section {
     padding-right: 15px;
     float: right;
 }
-.sub-btn {
-    bottom: 0;
-}
+
 .drop-menu p {
     font-size: 10px;
 }
+
+
 
 @media screen and (max-width: 768px) {
     .link:not(:nth-child(3)) {

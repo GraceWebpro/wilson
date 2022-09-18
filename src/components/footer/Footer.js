@@ -8,7 +8,9 @@ const Footer = () => {
   return (
     
     <div className='footer'>
-      <iframe className='letter' title="Newsletter" width="300" height="305" src="https://d2b30406.sibforms.com/serve/MUIEANbNX-rsJ3vxiqiQcukTelmv0G6K6pMKukYRikw2rbUQMen47wVdJsaQg-Z7vCyS2-J963SSYZCK_YKkGW2z2286DKNvWP7VZIc1UIkOsycOu22X4-f4tVI8AlACLQllUlE4iz9i5_SUJVdgWYZ-H6eXMqSgJyOpoeh8d7QwZAQwkipvOEmg7cclhuZp8ZQy28tntO1vXTTm" frameBorder="0" scrolling="no" allowFullScreen ></iframe>
+      <center>
+        <iframe className='letter' title="Newsletter" width="300" height="305" src="https://d2b30406.sibforms.com/serve/MUIEANbNX-rsJ3vxiqiQcukTelmv0G6K6pMKukYRikw2rbUQMen47wVdJsaQg-Z7vCyS2-J963SSYZCK_YKkGW2z2286DKNvWP7VZIc1UIkOsycOu22X4-f4tVI8AlACLQllUlE4iz9i5_SUJVdgWYZ-H6eXMqSgJyOpoeh8d7QwZAQwkipvOEmg7cclhuZp8ZQy28tntO1vXTTm" frameBorder="0" scrolling="no" allowFullScreen ></iframe>
+      </center>
       <div className='icon'>
 
         <a href='https://web.facebook.com/michaelo.wilson07?_rdc=1&_rdr'><IconContext.Provider value={{color: "white", size: "20px" }}><FaFacebookF onMouseOver={({target}) => target.style.color="gray"} onMouseOut={({target}) => target.style.color="#fff"} /></IconContext.Provider></a>

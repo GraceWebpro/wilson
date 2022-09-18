@@ -38,7 +38,9 @@ const Music = () => {
                     <a className='img' href={isMusic.homepage}>
                         <img src={isMusic.image} alt={isMusic.title} width={350} height={320} />
                     </a>
-                    <h4><a href={isMusic.homepage}>{isMusic.title}</a></h4>
+                    <center>
+                        <h4 className='latest'><a href={isMusic.homepage}>{isMusic.title}</a></h4>
+                    </center>
                     <p>{isMusic.month}</p>
                 </div>   
             )
