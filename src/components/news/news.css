@@ -69,6 +69,11 @@ h5 {
     text-decoration: underline;
 }
 
+.news-detail {
+    align-items: center;
+    width: 80%;
+}
+
 /*----- MEDIA QUERIES TABLET (MEDIUM DEVICES)-------*/
 @media screen and (max-width: 1200px) {
     .news-container {
