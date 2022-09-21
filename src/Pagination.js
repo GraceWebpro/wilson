@@ -17,7 +17,26 @@ const Pagination = () => {
         const q = query(collRef, orderBy('createdAt', 'desc'), limit(3))
 
         const fetchNews = onSnapshot(q, snapshot => {
-            updateState(snapshot)
+          const isCollectionEmpty = snapshot.size === 0;
+          if(!isCollectionEmpty) {
+              const list = snapshot.docs.map((doc) => {
+                  return {
+                      id: doc.id,
+                      title: doc.data().title,
+                      image: doc.data().images,
+                      subTitle: doc.data().subTitle,
+                      content: doc.data().content,
+                      date: doc.data().date,
+                     
+                  }
+              });
+              const lastDoc = snapshot.docs[snapshot.docs.length - 1];
+              setNewsL(newsL => [ ...newsL, ...list]);
+              setLastDoc(lastDoc);
+          } else {
+              setIsEmpty(true);
+          }
+          setLoading(false);
         })
     }, [])
 
@@ -36,7 +55,7 @@ const Pagination = () => {
                 }
             });
             const lastDoc = snapshot.docs[snapshot.docs.length - 1];
-            setNewsL(newsL => [ ...newsL, ...list]);
+            setNewsL(list);
             setLastDoc(lastDoc);
         } else {
             setIsEmpty(true);
@@ -48,7 +67,26 @@ const Pagination = () => {
         setLoading(true);
         const q = query(collRef, orderBy('createdAt', 'desc'), startAfter(lastDoc), limit(3))
         onSnapshot(q, snapshot => {
-           updateState(snapshot)
+          const isCollectionEmpty = snapshot.size === 0;
+          if(!isCollectionEmpty) {
+              const list = snapshot.docs.map((doc) => {
+                  return {
+                      id: doc.id,
+                      title: doc.data().title,
+                      image: doc.data().images,
+                      subTitle: doc.data().subTitle,
+                      content: doc.data().content,
+                      date: doc.data().date,
+                     
+                  }
+              });
+              const lastDoc = snapshot.docs[snapshot.docs.length - 1];
+              setNewsL(newsL => [ ...newsL, ...list]);
+              setLastDoc(lastDoc);
+          } else {
+              setIsEmpty(true);
+          }
+          setLoading(false);
         })
 
     }

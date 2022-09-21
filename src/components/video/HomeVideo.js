@@ -27,7 +27,7 @@ const Video = () => {
         {movies.map(movie => (
             <div key={movie.id}>
                  <div className='video'>
-                    <center><iframe className='iframe-2' width="600" height="500" src={movie.data.url} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></center>
+                    <center><iframe className='iframe-2' width="600" height="315" src={movie.data.url} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></center>
                 </div>
             </div>
         ))}

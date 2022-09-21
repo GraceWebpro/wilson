@@ -5,7 +5,6 @@ import HomeVideo from '../video/HomeVideo'
 import HomeNews from '../news/HomeNews'
 
 import './home.css'
-import Pagination from '../../Pagination'
 
 
 const Home = () => {
@@ -14,7 +13,6 @@ const Home = () => {
   return (
     <div>
         <HomeVideo />
-        <Pagination />
         <HomeMusic />
         <HomeNews />
     </div>
